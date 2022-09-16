@@ -1,10 +1,14 @@
+package sorting;
+
+//Given an unsorted array of size N, use selection sort to sort arr[] in increasing order.
 public class SelectionSort {
 
-    static int n=5;
-    static int[] arr ={4,5,3,1,6};
+    static int n;
+    static int arr[] ={4,5,3,1,6};
+
     public static void main(String[] args)
     {
-        printArr(arr,n);
+        printArr(arr);
     }
     public static void sort(int[] arr, int n){
         int temp;
@@ -20,7 +24,8 @@ public class SelectionSort {
         }
     }
 
-    public static void printArr(int[] arr, int n){
+    public static void printArr(int[] arr){
+        n=arr.length;
         sort(arr,n);
         for(int i=0;i<n;i++){
             System.out.println(arr[i]);
